@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sarkar Innovation</title>
+
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- ░░ NAVBAR WITH ICON ░░ -->
+  <nav class="bg-gray-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      
+      <!-- Logo + Animated SVG  -->
+      <div class="flex items-center space-x-3">
+        <!-- Innovation bulb-gear icon -->
+        <svg class="w-8 h-8 text-indigo-400 animate-bounce" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M32 2C22.06 2 14 10.06 14 20c0 6.12 3.06 11.53 7.72 14.83C22.06 36.06 22 36.39 22 36.61V44c0 .55.45 1 1 1h5v6h8v-6h5c.55 0 1-.45 1-1v-7.39c0-.22-.06-.55.28-.78C46.94 31.53 50 26.12 50 20 50 10.06 41.94 2 32 2Zm-2 40h4v4h-4v-4Zm-6-2v-5.76c0-.84.39-1.63 1.06-2.14a14.98 14.98 0 0 0 4.74-5.6c.21-.43.63-.68 1.06-.68s.85.26 1.06.68a14.98 14.98 0 0 0 4.74 5.6c.67.51 1.06 1.3 1.06 2.14V40H24ZM32 6c7.73 0 14 6.27 14 14 0 4.67-2.31 8.92-6.18 11.57a18.25 18.25 0 0 1-3.82-4.77A18.22 18.22 0 0 1 32 30a18.22 18.22 0 0 1-3.99-3.2 18.25 18.25 0 0 1-3.82 4.77C20.31 28.92 18 24.67 18 20c0-7.73 6.27-14 14-14Zm-1 52h2a1 1 0 0 1 0 2h-2a1 1 0 1 1 0-2Z"/>
+        </svg>
+
+        <!-- Brand name -->
+        <h1 class="text-2xl font-extrabold tracking-wide">
+          SARKAR <span class="text-indigo-400">INNOVATION</span>
+        </h1>
+      </div>
+
+      <!-- Desktop links -->
+      <div class="space-x-6 font-medium hidden md:flex">
+        <a href="#services" class="text-gray-300 hover:text-white transition">Services</a>
+        <a href="#about" class="text-gray-300 hover:text-white transition">About</a>
+        <a href="#contact" class="text-gray-300 hover:text-white transition">Contact</a>
+      </div>
+    </div>
+  </nav>
+  <!-- ░░ END NAVBAR ░░ -->
+
+  <!-- Hero -->
+  <section class="bg-gradient-to-r from-indigo-600 to-purple-700 py-20 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-5xl font-bold mb-4">Empowering Indian Stores with Innovation</h2>
+      <p class="text-xl text-gray-200 mb-6">
+      </p>
+      <a href="#contact" class="bg-white text-indigo-700 font-bold px-6 py-3 rounded-full hover:bg-gray-200 transition">
+        Start a Project
+      </a>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20 bg-gray-900">
+    <div class="max-w-6xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Our Core Services</h3>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div class="bg-white/10 backdrop-blur-lg p-6 rounded-xl shadow hover:shadow-2xl transition hover:scale-105">
+          <h4 class="text-xl font-semibold text-indigo-400 mb-2">Web Development</h4>
+          <p class="text-gray-300">Build modern websites, portals & dashboards for public and private needs.</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-20 bg-gradient-to-b from-gray-800 to-gray-900 text-center">
+    <div class="max-w-4xl mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-6">Who We Are</h3>
+      <p class="text-gray-300 text-lg">
+        Sarkar Innovation is an Indian tech company aiming to digitize the future. From empowering small
+        businesses to automating large systems, we are the bridge between governance and cutting-edge technology.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20 bg-gray-800 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+      <form class="grid md:grid-cols-2 gap-6">
+        <input type="text" placeholder="Your Name" class="p-4 rounded bg-gray-900 border border-gray-600 text-white" required />
+        <input type="email" placeholder="Your Email" class="p-4 rounded bg-gray-900 border border-gray-600 text-white" required />
+        <textarea placeholder="Your Message" rows="5"
+          class="p-4 rounded bg-gray-900 border border-gray-600 text-white md:col-span-2" required></textarea>
+        <button type="submit"
+          class="bg-indigo-600 hover:bg-indigo-700 py-3 px-6 rounded-full font-semibold md:col-span-2">
+          Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-center py-6">
+    <p class="text-gray-500">&copy; 2025 Sarkar Innovation. Crafted with ❤️ in India.</p>
+  </footer>
+
+</body>
+</html>
