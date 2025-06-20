@@ -1,0 +1,40 @@
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.btn {
+  @apply glass bg-white bg-opacity-10 text-white rounded-xl p-4 text-xl transition-all duration-200 hover:bg-opacity-20;
+}
+
+.op {
+  @apply bg-blue-400 bg-opacity-20 text-blue-200;
+}
+
+.equal {
+  @apply bg-green-400 bg-opacity-20 text-green-200;
+}
+
+.operation-active {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.btn-press {
+  transform: scale(0.95);
+}
