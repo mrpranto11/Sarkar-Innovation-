@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neon Calculator</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/neon-calculator.css" />
+</head>
+
+<body class="min-h-screen bg-gradient-to-br from-purple-900 via-blue-800 to-indigo-900 flex flex-col items-center justify-center p-4">
+
+  <!-- Logo with Text -->
+  <div class="flex items-center space-x-3 mb-6">
+    <svg class="w-10 h-10 text-indigo-400 animate-bounce" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 2C22.06 2 14 10.06 14 20c0 6.12 3.06 11.53 7.72 14.83C22.06 36.06 22 36.39 22 36.61V44c0 .55.45 1 1 1h5v6h8v-6h5c.55 0 1-.45 1-1v-7.39c0-.22-.06-.55.28-.78C46.94 31.53 50 26.12 50 20 50 10.06 41.94 2 32 2Zm-2 40h4v4h-4v-4Zm-6-2v-5.76c0-.84.39-1.63 1.06-2.14a14.98 14.98 0 0 0 4.74-5.6c.21-.43.63-.68 1.06-.68s.85.26 1.06.68a14.98 14.98 0 0 0 4.74 5.6c.67.51 1.06 1.3 1.06 2.14V40H24ZM32 6c7.73 0 14 6.27 14 14 0 4.67-2.31 8.92-6.18 11.57a18.25 18.25 0 0 1-3.82-4.77A18.22 18.22 0 0 1 32 30a18.22 18.22 0 0 1-3.99-3.2 18.25 18.25 0 0 1-3.82 4.77C20.31 28.92 18 24.67 18 20c0-7.73 6.27-14 14-14Zm-1 52h2a1 1 0 0 1 0 2h-2a1 1 0 1 1 0-2Z"/>
+    </svg>
+    <h1 class="text-white text-3xl font-extrabold tracking-wide">
+      SARKAR <span class="text-indigo-400">INNOVATION</span>
+    </h1>
+  </div>
+
+  <!-- Calculator -->
+  <div class="glass rounded-3xl overflow-hidden w-full max-w-md fade-in">
+    <div class="p-6">
+      <!-- Display -->
+      <div class="glass rounded-2xl p-4 mb-6 h-32 flex flex-col justify-end items-end">
+        <div id="history" class="text-gray-300 text-opacity-70 text-sm h-6 overflow-x-auto w-full text-right"></div>
+        <div id="display" class="text-white text-4xl font-light tracking-wider truncate w-full text-right">0</div>
+      </div>
+
+      <!-- Keypad -->
+      <div class="grid grid-cols-4 gap-3">
+        <button onclick="clearAll(event)" class="btn">AC</button>
+        <button onclick="toggleSign(event)" class="btn">+/-</button>
+        <button onclick="percentage(event)" class="btn">%</button>
+        <button onclick="setOperation(event,'/')" class="btn op">÷</button>
+
+        <button onclick="appendNumber(event,'7')" class="btn">7</button>
+        <button onclick="appendNumber(event,'8')" class="btn">8</button>
+        <button onclick="appendNumber(event,'9')" class="btn">9</button>
+        <button onclick="setOperation(event,'*')" class="btn op">×</button>
+
+        <button onclick="appendNumber(event,'4')" class="btn">4</button>
+        <button onclick="appendNumber(event,'5')" class="btn">5</button>
+        <button onclick="appendNumber(event,'6')" class="btn">6</button>
+        <button onclick="setOperation(event,'-')" class="btn op">−</button>
+
+        <button onclick="appendNumber(event,'1')" class="btn">1</button>
+        <button onclick="appendNumber(event,'2')" class="btn">2</button>
+        <button onclick="appendNumber(event,'3')" class="btn">3</button>
+        <button onclick="setOperation(event,'+')" class="btn op">+</button>
+
+        <button onclick="appendNumber(event,'0')" class="btn col-span-2">0</button>
+        <button onclick="appendDecimal(event)" class="btn">.</button>
+        <button onclick="calculate(event)" class="btn equal">=</button>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="px-6 pb-4 flex justify-between items-center">
+      <div class="text-xs text-gray-400">NeonCalc v1.0</div>
+      <div class="flex space-x-2">
+        <div class="w-2 h-2 rounded-full bg-green-400 opacity-70"></div>
+        <div class="w-2 h-2 rounded-full bg-yellow-400 opacity-30"></div>
+        <div class="w-2 h-2 rounded-full bg-red-400 opacity-30"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="scripts/neon-calculator.js"></script>
+</body>
+</html>
