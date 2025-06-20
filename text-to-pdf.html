@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Text to PDF Converter</title>
+
+  <!-- Feature-specific CSS for this module -->
+  <link rel="stylesheet" href="css/text-to-pdf.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>Text to PDF Converter</h1>
+      <p>Write, format and convert your text to a professional PDF file.</p>
+    </header>
+
+    <section class="editor-section">
+      <div class="toolbar">
+        <button data-command="bold" title="Bold"><b>B</b></button>
+        <button data-command="italic" title="Italic"><i>I</i></button>
+        <button data-command="underline" title="Underline"><u>U</u></button>
+        <button data-command="insertUnorderedList" title="Bullet List">&#8226; List</button>
+        <button data-command="insertOrderedList" title="Numbered List">1. List</button>
+        <button data-command="justifyLeft" title="Align Left">Left</button>
+        <button data-command="justifyCenter" title="Align Center">Center</button>
+        <button data-command="justifyRight" title="Align Right">Right</button>
+        <input type="color" id="text-color" title="Text Color" />
+        <input type="color" id="highlight-color" title="Highlight Color" />
+        <button id="add-image-btn" title="Insert Image">Image</button>
+      </div>
+
+      <div id="editor" class="text-editor" contenteditable="true">
+        <p>Start typing your content here...</p>
+      </div>
+
+      <div class="editor-actions">
+        <button id="clear-btn">Clear</button>
+        <button id="sample-btn">Load Sample</button>
+      </div>
+    </section>
+
+    <section class="settings-section">
+      <h2>PDF Settings</h2>
+      <label>Page Size:
+        <select id="page-size">
+          <option value="a4">A4</option>
+          <option value="letter">Letter</option>
+          <option value="legal">Legal</option>
+        </select>
+      </label>
+      <label>Orientation:
+        <select id="orientation">
+          <option value="portrait">Portrait</option>
+          <option value="landscape">Landscape</option>
+        </select>
+      </label>
+      <label>Margin (mm):
+        <input type="number" id="margin" value="10" min="0" max="50">
+      </label>
+      <label>Font Size:
+        <select id="font-size">
+          <option value="10">10pt</option>
+          <option value="12" selected>12pt</option>
+          <option value="14">14pt</option>
+          <option value="16">16pt</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="preview-section">
+      <h2>PDF Preview</h2>
+      <div id="pdf-preview" class="pdf-preview">
+        <p>Your PDF preview will appear here.</p>
+      </div>
+      <div class="download-actions">
+        <button id="convert-btn">Convert to PDF</button>
+        <button id="download-btn">Download PDF</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2025 Text to PDF App | Built with ❤️ by Sarkar Innovation</p>
+    </footer>
+  </div>
+
+  <!-- JS Libraries -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <!-- Feature-specific JS -->
+  <script src="scripts/text-to-pdf.js"></script>
+</body>
+</html>
